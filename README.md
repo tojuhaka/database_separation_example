@@ -3,8 +3,11 @@ Simple product catalog software with isolated database code. The main beef of th
 In database.py there are sqlalchemy specific classes. And database_interface.py acts as a clue between application specific logic and database logic. Api.py contains all the WEB related stuff. It would have been really fast to use only Flask and Flask-SQLAlchemy, but I wanted to implement this a little bit more abstract way so that we aren't stuck with web and database technologies so tightly. The downside is a little bit more code because we map the results from sqlalchemy to app-specific resources that are used by API. But that keeps all the parts web / db / resources isolated from each other.
 
 Language: Python 3.6
+
 Database solution: SQLite + SQLAlchemy
+
 Framework for API: Flask Restful
+
 
 `pip install -r requirements.txt`
 `pytest tests.py`
